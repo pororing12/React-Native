@@ -13,8 +13,6 @@ import CAR from './src/components/CAR'
 import FlatListBasics from './src/components/SectionListBasics';
 import SelectionListBasics from './src/components/SelectionListBasics';
 import TopNav from './src/components/TopNav';
-import FooterTab from './src/components/FooterTab';
-import Router from '/src/components/FooterTab'
 
 
 export default function App() {
@@ -32,11 +30,9 @@ export default function App() {
       <ButtonGroup></ButtonGroup>
        <SelectionListBasics></SelectionListBasics>
        <CAR></CAR>
-       
+
+      <TopNav></TopNav>*/}
 <FlatListBasics></FlatListBasics>
-<TopNav></TopNav>
-<FooterTab></FooterTab>*/}
-<Router/>
     </View>
   );
 }

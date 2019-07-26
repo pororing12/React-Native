@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import { View, FlatList, Text, TouchableOpacity, Button,StyleSheet} from 'react-native';
-
+import { View, TextInput, FlatList, Text, TouchableOpacity, Button,StyleSheet} from 'react-native';
 export default class FlatListBasics extends Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = {keyword: ''}
+    }
     render() {
         return (
-            <View>
+            <View style = {styles.container}>
+                <TextInput placeholder = "검색어"
+                onChangeText = {(keyword) => this.setState({keyword})}/>
                 <FlatList
                   data = {[
                     {key : '영수', univ : '경북대학교'},                      
@@ -38,7 +42,7 @@ export default class FlatListBasics extends Component {
 
 const styles = StyleSheet.create({
     container : {
-        marginRight : 150,
+        marginRight : 70,
         marginTop : 30,
         fontSize : 15, 
         
