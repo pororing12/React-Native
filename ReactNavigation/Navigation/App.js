@@ -8,17 +8,17 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 
-// const AppNavigator = createStackNavigator ({
-//   Home : {
-//     screen : HomeScreen
-//   },
-//   Detail : {
-//     screen : DetailScreen
-//   },
-//   Setting : {
-//     screen : SettingScreen
-//   }
-// });
+const StackNavigator = createStackNavigator ({
+  Home : {
+    screen : HomeScreen
+  },
+  Detail : {
+    screen : DetailScreen
+  },
+  // Setting : {
+  //   screen : SettingScreen
+  // }
+});
 
 const defaultNavigationOptions = {
   headerTintColor : 'white',
@@ -34,7 +34,7 @@ const defaultNavigationOptions = {
 
 const TabNavigator = createBottomTabNavigator({
   Home : {
-    screen : HomeScreen,
+    screen : StackNavigator,
     navigationOptions: {
       title : '홈',
       tabBarIcon : (
@@ -51,6 +51,7 @@ const TabNavigator = createBottomTabNavigator({
 })
 // const AppContainer = createAppContainer(AppNavigator);
 const AppContainer = createAppContainer(TabNavigator);
+const StackContainer  = createAppContainer(StackNavigator)
 
 export default function App() {
   
